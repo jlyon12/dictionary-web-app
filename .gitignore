@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#frontend mentor challenge directory
+dictionary-web-app
