@@ -1,0 +1,9 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './functions' as *;
+
+@include themify($themes) {
+	font-family: themed(font);
+	background-color: themed(background);
+	color: themed(textPrimary);
+}

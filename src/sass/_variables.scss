@@ -1,0 +1,93 @@
+@font-face {
+	font-family: 'Inconsolata';
+	src: url('/src/assets/fonts/inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf');
+	font-weight: 100 900;
+	font-style: normal, italic;
+}
+@font-face {
+	font-family: 'Inter';
+	src: url('/src/assets/fonts/inter/Inter-VariableFont_slnt\,wght.ttf');
+	font-weight: 100 900;
+	font-style: normal, italic;
+}
+@font-face {
+	font-family: 'Lora';
+	src: url('/src/assets/fonts/lora/Lora-VariableFont_wght.ttf');
+	font-weight: 100 900;
+	font-style: normal, italic;
+}
+@font-face {
+	font-family: 'Lora';
+	src: url('/src/assets/fonts/lora/Lora-Italic-VariableFont_wght.ttf');
+	font-weight: 100 900;
+	font-style: italic;
+}
+
+// Typography
+
+$ff-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+	Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$ff-primary: 'Inter', $ff-system;
+$ff-mono: 'Inconsolata', $ff-system;
+$ff-serif: 'Lora', $ff-system;
+
+// Colors
+
+$clr-dark-100: hsl(0, 0%, 23%);
+$clr-dark-200: hsl(0, 0%, 18%);
+$clr-dark-300: hsl(0, 0%, 12%);
+$clr-dark-400: hsl(0, 0%, 2%);
+
+$clr-light-100: hsl(0, 0%, 100%);
+$clr-light-200: hsl(0, 0%, 96%);
+$clr-light-300: hsl(0, 0%, 91%);
+$clr-light-400: hsl(0, 0%, 46%);
+
+$clr-primary: hsl(274, 82%, 60%);
+$clr-danger: hsl(0, 100%, 66%);
+
+// Theme Config
+
+$themes: (
+	light: (
+		background: $clr-light-100,
+		textPrimary: $clr-dark-400,
+		textAlt: $clr-light-400,
+		textAccent: $clr-primary,
+		listBullet: $clr-primary,
+		line: $clr-light-300,
+		inputBg: $clr-light-200,
+		toggleSwitchOff: $clr-light-400,
+		toggleSwitchOn: $clr-primary,
+		menuIconActive: $clr-primary,
+		menuIconInactive: $clr-light-400,
+		modeIcon: $clr-light-400,
+		searchIcon: $clr-primary,
+	),
+	dark: (
+		background: $clr-dark-400,
+		textPrimary: $clr-light-100,
+		textAlt: $clr-light-400,
+		textAccent: $clr-primary,
+		listBullet: $clr-primary,
+		line: $clr-dark-100,
+		inputBg: $clr-dark-300,
+		toggleSwitchOff: $clr-dark-300,
+		toggleSwitchOn: $clr-primary,
+		menuIconActive: $clr-primary,
+		menuIconInactive: $clr-light-400,
+		modeIcon: $clr-light-400,
+		searchIcon: $clr-primary,
+	),
+
+	mono: (
+		font: $ff-mono,
+	),
+	serif: (
+		font: $ff-serif,
+	),
+	sans: (
+		font: $ff-primary,
+	),
+);
