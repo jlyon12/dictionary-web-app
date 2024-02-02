@@ -1,0 +1,55 @@
+@use '/src/sass/index.scss' as *;
+
+.checkbox {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.label {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	width: 40px;
+	height: 20px;
+	border-radius: 100px;
+	position: relative;
+}
+
+@include themify($themes) {
+	.label {
+		background-color: themed(toggleSwitchOff);
+	}
+	.checkbox:checked + .label {
+		background-color: themed(toggleSwitchOn);
+	}
+}
+
+.label {
+	.btn {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 16px;
+		height: 16px;
+		border-radius: 100%;
+		transition: 0.2s;
+		box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+		background-color: white;
+	}
+}
+
+.checkbox:checked + .label {
+	.btn {
+		left: calc(100% - 2px);
+		transform: translateX(-100%);
+	}
+}
+
+.label:active {
+	.btn {
+		width: 18px;
+	}
+}
