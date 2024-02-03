@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import SearchField from './components/SearchField';
 import useThemeContext from './hooks/useThemeContext';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 		>
 			<div className="page-wrapper">
 				<Header />
+				<SearchField />
 			</div>
 		</div>
 	);

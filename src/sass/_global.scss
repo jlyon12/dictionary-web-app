@@ -13,5 +13,19 @@
 }
 
 .page-wrapper {
+	margin: 0 auto;
 	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+
+	@include breakpoint-md {
+		max-width: 689px;
+		gap: 2rem;
+		padding: 50px;
+	}
+
+	@include breakpoint-xl {
+		max-width: 737px;
+	}
 }
