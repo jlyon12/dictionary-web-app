@@ -50,6 +50,15 @@ $clr-danger: hsl(0, 100%, 66%);
 // Theme Config
 
 $themes: (
+	mono: (
+		font: $ff-mono,
+	),
+	serif: (
+		font: $ff-serif,
+	),
+	sans: (
+		font: $ff-primary,
+	),
 	light: (
 		background: $clr-light-100,
 		textPrimary: $clr-dark-400,
@@ -62,6 +71,8 @@ $themes: (
 		toggleSwitchOn: $clr-primary,
 		menuIconActive: $clr-primary,
 		menuIconInactive: $clr-light-400,
+		menuBackground: $clr-light-100,
+		menuShadow: rgba($clr-dark-400, 0.2),
 		modeIcon: $clr-light-400,
 		searchIcon: $clr-primary,
 	),
@@ -77,17 +88,9 @@ $themes: (
 		toggleSwitchOn: $clr-primary,
 		menuIconActive: $clr-primary,
 		menuIconInactive: $clr-light-400,
+		menuBackground: $clr-dark-300,
+		menuShadow: rgba($clr-primary, 0.8),
 		modeIcon: $clr-light-400,
 		searchIcon: $clr-primary,
-	),
-
-	mono: (
-		font: $ff-mono,
-	),
-	serif: (
-		font: $ff-serif,
-	),
-	sans: (
-		font: $ff-primary,
 	),
 );

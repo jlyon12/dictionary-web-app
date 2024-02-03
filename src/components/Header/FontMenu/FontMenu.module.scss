@@ -1,0 +1,81 @@
+@use '/src/sass/index.scss' as *;
+
+.container {
+	position: relative;
+	button {
+		appearance: none;
+		border: 1px solid transparent;
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+	p {
+		text-transform: capitalize;
+	}
+}
+.btn {
+	display: flex;
+	align-items: center;
+	gap: 1.125rem;
+	&:hover {
+		svg {
+			transform: translateY(25%);
+		}
+		p {
+			text-decoration: underline;
+		}
+	}
+}
+
+.list {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+	height: 152px;
+	width: 183px;
+	right: 0;
+	border-radius: 1rem;
+	list-style-type: none;
+	top: 2.5rem;
+	padding: 0 1rem;
+
+	li:nth-of-type(1) {
+		font-family: $ff-primary;
+	}
+	li:nth-of-type(2) {
+		font-family: $ff-serif;
+	}
+	li:nth-of-type(3) {
+		font-family: $ff-mono;
+	}
+}
+
+.hidden {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+@include themify($themes) {
+	.container {
+		button {
+			background-color: themed(background);
+			color: themed(textPrimary);
+		}
+	}
+	.list {
+		background-color: themed(menuBackground);
+		box-shadow: 2px 2px 5px 1px themed(menuShadow);
+		button {
+			background-color: themed(menuBackground);
+			color: themed(textPrimary);
+		}
+
+		button:hover,
+		button:focus {
+			color: themed(textAccent);
+		}
+	}
+}

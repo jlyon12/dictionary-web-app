@@ -1,6 +1,6 @@
 import { createContext, useReducer } from 'react';
 
-type FontFamily = 'sans' | 'serif' | 'mono';
+export type FontFamily = 'sans' | 'serif' | 'mono';
 
 interface ThemeContextType {
 	state: InitialStateType;
