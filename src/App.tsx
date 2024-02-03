@@ -1,6 +1,7 @@
+import useThemeContext from './hooks/useThemeContext';
 import Header from './components/Header';
 import SearchField from './components/SearchField';
-import useThemeContext from './hooks/useThemeContext';
+import WordHero from './components/WordHero';
 
 function App() {
 	const { state } = useThemeContext();
@@ -15,6 +16,7 @@ function App() {
 			<div className="page-wrapper">
 				<Header />
 				<SearchField />
+				<WordHero />
 			</div>
 		</div>
 	);

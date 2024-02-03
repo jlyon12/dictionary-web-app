@@ -1,0 +1,46 @@
+@use '/src/sass/index.scss' as *;
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-height: 68px;
+
+	button {
+		appearance: none;
+		border: 1px solid transparent;
+		background-color: transparent;
+		cursor: pointer;
+	}
+}
+
+.wordContainer {
+	h1 {
+		font-size: 2rem;
+	}
+	p {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+}
+
+@include themify($themes) {
+	.container {
+		button:has(svg) {
+			color: themed(searchIcon);
+			&:hover {
+				svg circle {
+					opacity: 1;
+				}
+				svg path {
+					color: $clr-light-100;
+				}
+			}
+		}
+	}
+	.wordContainer {
+		p {
+			color: themed(textAccent);
+		}
+	}
+}
