@@ -1,0 +1,29 @@
+@use '/src/sass/index.scss' as *;
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	svg {
+		flex-shrink: 0;
+	}
+}
+
+.toggleContainer {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-left: 1rem;
+	hr {
+		height: 2rem;
+	}
+}
+
+@include themify($themes) {
+	.activeIcon {
+		color: themed(menuIconActive);
+	}
+	.inactiveIcon {
+		color: themed(menuIconInactive);
+	}
+}

@@ -7,3 +7,11 @@
 	background-color: themed(background);
 	color: themed(textPrimary);
 }
+
+.app {
+	min-height: 100vh;
+}
+
+.page-wrapper {
+	padding: 25px;
+}

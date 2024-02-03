@@ -4,6 +4,7 @@
 	height: 0;
 	width: 0;
 	visibility: hidden;
+	position: absolute;
 }
 
 .label {
@@ -15,6 +16,7 @@
 	height: 20px;
 	border-radius: 100px;
 	position: relative;
+	flex-shrink: 0;
 }
 
 @include themify($themes) {

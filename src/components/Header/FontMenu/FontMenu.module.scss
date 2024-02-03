@@ -2,6 +2,8 @@
 
 .container {
 	position: relative;
+
+	padding: 0;
 	button {
 		appearance: none;
 		border: 1px solid transparent;
@@ -17,6 +19,9 @@
 	display: flex;
 	align-items: center;
 	gap: 1.125rem;
+	svg {
+		flex-shrink: 0;
+	}
 	&:hover {
 		svg {
 			transform: translateY(25%);
@@ -35,7 +40,7 @@
 	gap: 1rem;
 	height: 152px;
 	width: 183px;
-	right: 0;
+
 	border-radius: 1rem;
 	list-style-type: none;
 	top: 2.5rem;
@@ -49,6 +54,9 @@
 	}
 	li:nth-of-type(3) {
 		font-family: $ff-mono;
+	}
+	@include breakpoint-md {
+		right: 0;
 	}
 }
 
