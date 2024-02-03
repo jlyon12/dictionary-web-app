@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import DownArrow from '../../../assets/images/icon-arrow-down.svg?react';
 import useThemeContext from '../../../hooks/useThemeContext';
 import useClickOutside from '../../../hooks/useClickOutside';
-import { FontFamily } from '../../../context/ThemeContext';
-import DownArrow from '../../../assets/images/icon-arrow-down.svg?react';
+import { FontFamily } from '../../../types';
 import Styles from './FontMenu.module.scss';
 
 const FontMenu = () => {

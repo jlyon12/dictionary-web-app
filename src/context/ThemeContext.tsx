@@ -1,20 +1,5 @@
 import { createContext, useReducer } from 'react';
-
-export type FontFamily = 'sans' | 'serif' | 'mono';
-
-interface ThemeContextType {
-	state: InitialStateType;
-	dispatch: React.Dispatch<ACTIONTYPE>;
-}
-
-interface InitialStateType {
-	font: FontFamily;
-	darkMode: boolean;
-}
-
-type ACTIONTYPE =
-	| { type: 'SET_FONT'; payload: FontFamily }
-	| { type: 'TOGGLE_DARKMODE' };
+import { ACTIONTYPE, InitialStateType, ThemeContextType } from '../types';
 
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
