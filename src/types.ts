@@ -7,8 +7,10 @@ interface Definition {
 	antonyms: string[];
 }
 
-interface Meaning {
+export interface Meaning {
 	partOfSpeech: string;
+	synonyms: string[];
+	antonyms: string[];
 	definitions: Definition[];
 }
 

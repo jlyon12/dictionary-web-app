@@ -3,6 +3,7 @@ import useThemeContext from './hooks/useThemeContext';
 import Header from './components/Header';
 import SearchField from './components/SearchField';
 import WordHero from './components/WordHero';
+import WordDetail from './components/WordDetail';
 import { NotFoundResponse, WordData } from './types';
 import { AxiosError } from 'axios';
 
@@ -24,6 +25,7 @@ function App() {
 				<Header />
 				<SearchField setWordData={setWordData} setError={setError} />
 				<WordHero wordData={wordData} />
+				{wordData?.meanings.map((m, i) => <WordDetail key={i} meaning={m} />)}
 			</div>
 		</div>
 	);

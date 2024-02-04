@@ -22,10 +22,11 @@
 	@include breakpoint-md {
 		max-width: 689px;
 		gap: 2rem;
-		padding: 50px;
+		padding: 40px;
 	}
 
 	@include breakpoint-xl {
 		max-width: 737px;
+		padding: 50px;
 	}
 }
