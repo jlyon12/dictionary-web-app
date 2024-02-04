@@ -1,11 +1,14 @@
 import { useRef, useEffect } from 'react';
 
 const useClickOutside = (callback: () => void) => {
-	const ref = useRef<HTMLElement>(null);
+	const ref = useRef<HTMLButtonElement | null>(null);
 
 	useEffect(() => {
 		const handleClick = (event: MouseEvent) => {
-			if (ref.current && !ref.current.contains(event.target as HTMLElement)) {
+			if (
+				ref.current &&
+				!ref.current?.contains(event.target as HTMLButtonElement)
+			) {
 				callback();
 			}
 		};
