@@ -26,6 +26,7 @@ const SearchField = ({ setWordData, setError }: Props) => {
 		try {
 			const data = await apiService.getWordData(search);
 			setWordData(data[0]);
+			setSearch('');
 		} catch (e) {
 			if (e instanceof AxiosError && isNotFoundResponse(e.response?.data)) {
 				return setError(e.response.data);
