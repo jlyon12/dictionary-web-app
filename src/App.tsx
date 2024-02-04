@@ -26,7 +26,14 @@ function App() {
 				<Header />
 				<SearchField setWordData={setWordData} setError={setError} />
 				<WordHero wordData={wordData} />
-				{wordData?.meanings.map((m, i) => <WordDetail key={i} meaning={m} />)}
+				{wordData?.meanings.map((m, i) => (
+					<WordDetail
+						key={i}
+						meaning={m}
+						setWordData={setWordData}
+						setError={setError}
+					/>
+				))}
 				{error && <Error error={error} />}
 			</main>
 		</div>

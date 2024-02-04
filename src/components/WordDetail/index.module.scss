@@ -54,6 +54,16 @@ section:has(.synonymsList) {
 	row-gap: 0.25rem;
 	list-style-type: none;
 	font-weight: 600;
+
+	button {
+		appearance: none;
+		cursor: pointer;
+		border: 1px solid transparent;
+		background-color: transparent;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 @include themify($themes) {
@@ -76,6 +86,9 @@ section:has(.synonymsList) {
 	}
 	.synonymsList {
 		li {
+			color: themed(textAccent);
+		}
+		button {
 			color: themed(textAccent);
 		}
 	}

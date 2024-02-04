@@ -1,12 +1,17 @@
-import { Meaning } from '../../types';
+import { AxiosError } from 'axios';
+import { Meaning, NotFoundResponse, WordData } from '../../types';
 import DefinitionsList from './MeaningsList';
 import SynonymsList from './SynonymsList';
 import Styles from './index.module.scss';
 
 interface Props {
 	meaning: Meaning | null;
+	setWordData: React.Dispatch<React.SetStateAction<WordData | null>>;
+	setError: React.Dispatch<
+		React.SetStateAction<AxiosError | NotFoundResponse | null>
+	>;
 }
-const WordDetail = ({ meaning }: Props) => {
+const WordDetail = ({ meaning, setWordData, setError }: Props) => {
 	if (!meaning) {
 		return null;
 	}
@@ -15,7 +20,11 @@ const WordDetail = ({ meaning }: Props) => {
 			<h2 className={Styles.partOfSpeech}>{meaning.partOfSpeech}</h2>
 			<DefinitionsList definitions={meaning.definitions} />
 
-			<SynonymsList synonyms={meaning.synonyms} />
+			<SynonymsList
+				synonyms={meaning.synonyms}
+				setWordData={setWordData}
+				setError={setError}
+			/>
 		</article>
 	);
 };
