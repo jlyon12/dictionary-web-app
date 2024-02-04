@@ -4,6 +4,7 @@ import Header from './components/Header';
 import SearchField from './components/SearchField';
 import WordHero from './components/WordHero';
 import WordDetail from './components/WordDetail';
+import Error from './components/Error';
 import { NotFoundResponse, WordData } from './types';
 import { AxiosError } from 'axios';
 
@@ -21,12 +22,13 @@ function App() {
 					: `light-theme ${state.font}-theme app`
 			}
 		>
-			<div className="page-wrapper">
+			<main className="page-wrapper">
 				<Header />
 				<SearchField setWordData={setWordData} setError={setError} />
 				<WordHero wordData={wordData} />
 				{wordData?.meanings.map((m, i) => <WordDetail key={i} meaning={m} />)}
-			</div>
+				{error && <Error error={error} />}
+			</main>
 		</div>
 	);
 }

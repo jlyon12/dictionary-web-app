@@ -10,9 +10,10 @@ const WordHero = ({ wordData }: Props) => {
 		return null;
 	}
 	// Ensure playIcon does not appear for word without available audio
-	const soundFileUrl = wordData.phonetics[0].audio;
+	const soundFileUrl = wordData?.phonetics[0]?.audio || null;
 
 	const playSound = () => {
+		if (!soundFileUrl) return;
 		const sound = new Audio(soundFileUrl);
 		sound.play();
 	};
