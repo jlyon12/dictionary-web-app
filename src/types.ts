@@ -12,7 +12,7 @@ interface Meaning {
 	definitions: Definition[];
 }
 
-export interface Response {
+export interface WordData {
 	word: string;
 	phonetic: string;
 	phonetics: [
@@ -26,6 +26,12 @@ export interface Response {
 	];
 	origin: string;
 	meanings: Meaning[];
+}
+
+export interface NotFoundResponse {
+	message: string;
+	resolution: string;
+	title: string;
 }
 
 // Theme Context related types
