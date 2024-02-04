@@ -16,7 +16,9 @@
 }
 
 @include themify($themes) {
-	p:last-of-type {
-		color: themed(textAlt);
+	.container {
+		p:last-of-type {
+			color: themed(textAlt);
+		}
 	}
 }
