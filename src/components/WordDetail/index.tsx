@@ -1,6 +1,6 @@
 import { AxiosError } from 'axios';
 import { Meaning, NotFoundResponse, WordData } from '../../types';
-import DefinitionsList from './MeaningsList';
+import DefinitionsList from './DefinitionsList';
 import SynonymsList from './SynonymsList';
 import Styles from './index.module.scss';
 
@@ -16,7 +16,7 @@ const WordDetail = ({ meaning, setWordData, setError }: Props) => {
 		return null;
 	}
 	return (
-		<article className={Styles.container}>
+		<section className={Styles.container}>
 			<h2 className={Styles.partOfSpeech}>{meaning.partOfSpeech}</h2>
 			<DefinitionsList definitions={meaning.definitions} />
 
@@ -25,7 +25,7 @@ const WordDetail = ({ meaning, setWordData, setError }: Props) => {
 				setWordData={setWordData}
 				setError={setError}
 			/>
-		</article>
+		</section>
 	);
 };
 

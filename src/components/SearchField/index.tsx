@@ -43,12 +43,14 @@ const SearchField = ({ setWordData, setError }: Props) => {
 					className={inputError ? Styles.error : ''}
 					tabIndex={0}
 					type="text"
+					aria-label="search"
 					value={search}
 					placeholder="Search for any word..."
 					onChange={({ target: { value } }) => setSearch(value)}
 				/>
-				<button>
-					<Icon />
+
+				<button aria-label="Search Word">
+					<Icon aria-label="Search Icon" />
 				</button>
 			</form>
 			{inputError && <p className={Styles.error}>{inputError}</p>}

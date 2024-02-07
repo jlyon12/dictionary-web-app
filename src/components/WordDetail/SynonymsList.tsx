@@ -33,16 +33,16 @@ const SynonymsList = ({ synonyms, setWordData, setError }: Props) => {
 		}
 	};
 	return (
-		<section>
+		<>
 			<h3>Synonyms</h3>
 			<ul className={Styles.synonymsList}>
-				{synonyms.map((s) => (
-					<li>
+				{synonyms.map((s, i) => (
+					<li key={i}>
 						<button onClick={() => searchSynonym(s)}>{s}</button>
 					</li>
 				))}
 			</ul>
-		</section>
+		</>
 	);
 };
 

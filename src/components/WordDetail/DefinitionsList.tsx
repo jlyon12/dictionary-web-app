@@ -10,17 +10,17 @@ const DefinitionsList = ({ definitions }: Props) => {
 		return null;
 	}
 	return (
-		<section>
+		<>
 			<h3>Meaning</h3>
 			<ul className={Styles.definitionsList}>
-				{definitions.map((d) => (
-					<li>
+				{definitions.map((d, i) => (
+					<li key={i}>
 						{d.definition}
 						{d.example && <span>"{d.example}"</span>}
 					</li>
 				))}
 			</ul>
-		</section>
+		</>
 	);
 };
 

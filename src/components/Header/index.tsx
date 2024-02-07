@@ -10,7 +10,7 @@ const Header = () => {
 
 	return (
 		<header className={Styles.container}>
-			<Logo width={32} height={32} />
+			<Logo width={32} height={32} aria-label="Website Logo" />
 
 			<div className={Styles.toggleContainer}>
 				<FontMenu />
@@ -22,6 +22,7 @@ const Header = () => {
 				/>
 				<MoonIcon
 					className={state.darkMode ? Styles.activeIcon : Styles.inactiveIcon}
+					aria-label="Dark Mode Moon Icon"
 				/>
 			</div>
 		</header>

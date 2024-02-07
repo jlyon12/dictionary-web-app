@@ -23,21 +23,23 @@ function App() {
 					: `light-theme ${state.font}-theme app`
 			}
 		>
-			<main className="page-wrapper">
+			<div className="page-wrapper">
 				<Header />
-				<SearchField setWordData={setWordData} setError={setError} />
-				<WordHero wordData={wordData} />
-				{wordData?.meanings.map((m, i) => (
-					<WordDetail
-						key={i}
-						meaning={m}
-						setWordData={setWordData}
-						setError={setError}
-					/>
-				))}
-				<WordSource wordData={wordData} />
-				{error && <Error error={error} />}
-			</main>
+				<main className="content-wrapper">
+					<SearchField setWordData={setWordData} setError={setError} />
+					<WordHero wordData={wordData} />
+					{wordData?.meanings.map((m, i) => (
+						<WordDetail
+							key={i}
+							meaning={m}
+							setWordData={setWordData}
+							setError={setError}
+						/>
+					))}
+					<WordSource wordData={wordData} />
+					{error && <Error error={error} />}
+				</main>
+			</div>
 		</div>
 	);
 }

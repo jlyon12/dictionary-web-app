@@ -35,6 +35,15 @@
 	}
 }
 
+.content-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	@include breakpoint-md {
+		gap: 2rem;
+	}
+}
+
 hr {
 	content: '';
 	height: 1px;

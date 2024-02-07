@@ -30,7 +30,7 @@ const FontMenu = () => {
 			<button onClick={toggleMenu} className={Styles.btn} ref={ref}>
 				<p>{state.font}</p>
 				<span className={Styles.hidden}>show menu for font setting</span>
-				<DownArrow />
+				<DownArrow aria-label="Open Menu Icon" />
 			</button>
 			{isExpanded && (
 				<ul aria-expanded={isExpanded} className={Styles.list}>
