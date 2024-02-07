@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/dictionary-web-app-vite-react-typescript-Rs40YjwDyB)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/dictionary-web-app-vite-react-typescript-nMfNFGMN1_)
 - Live Site URL: [Hosted on Vercel](https://dictionary-web-app-sigma-six.vercel.app/)
 
 ## My process
