@@ -28,6 +28,7 @@ export interface WordData {
 	];
 	origin: string;
 	meanings: Meaning[];
+	sourceUrls: string[];
 }
 
 export interface NotFoundResponse {

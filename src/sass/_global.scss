@@ -6,6 +6,10 @@
 	font-family: themed(font);
 	background-color: themed(background);
 	color: themed(textPrimary);
+
+	hr {
+		color: themed(line);
+	}
 }
 
 .app {
@@ -29,4 +33,9 @@
 		max-width: 737px;
 		padding: 50px;
 	}
+}
+
+hr {
+	content: '';
+	height: 1px;
 }

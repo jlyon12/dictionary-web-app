@@ -7,6 +7,7 @@ import WordDetail from './components/WordDetail';
 import Error from './components/Error';
 import { NotFoundResponse, WordData } from './types';
 import { AxiosError } from 'axios';
+import WordSource from './components/WordSource/WordSource';
 
 function App() {
 	const { state } = useThemeContext();
@@ -34,6 +35,7 @@ function App() {
 						setError={setError}
 					/>
 				))}
+				<WordSource wordData={wordData} />
 				{error && <Error error={error} />}
 			</main>
 		</div>
